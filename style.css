@@ -13,17 +13,72 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   margin: 0 auto;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 768px;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header {
+  height: 130px;
+  border-bottom: 2px solid #999;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+}
+
+.btn-section {
+  display: flex;
+  justify-content: start;
+  gap: .5rem;
+}
+
+button {
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
+
+.container {
+  height: calc(100vh - 130px);
+  width: 100%;
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  & textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    resize: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+    background-color: #e4e4e4;
+    border: 0;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
