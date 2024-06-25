@@ -8,9 +8,16 @@
   </head>
   <body>
     <header>
-      <h1>Note-Taking-App on the fly to the next level! 🚀</h1>
+      <p class="page-title">Note-Taking-App on the fly to the next level! 🚀</p>
       
       <div class="btn-section">
+        <div role="button">
+          <label for="isPreview">
+            <input type="checkbox" id="isPreview">
+            Preview
+          </label>
+        </div>
+
         <button disabled>
           Copy Link
         </button>
@@ -22,7 +29,8 @@
     </header>
 
     <section class="container">
-      <textarea name="content" id="content" placeholder="Your first note!"></textarea>
+      <textarea id="content" contenteditable="true"></textarea>
+      <div id="preview" contenteditable="false"></div>
     </section>
 
     <script type="module" src="/main.js"></script>
