@@ -39,6 +39,12 @@ if (window.location.pathname && window.location.pathname !== '/') {
     $preview.classList.add('hidden')
   }
 }
+const isFirstVisit = window.location.pathname && window.location.pathname === '/'
+if (isFirstVisit) {
+  $editor.value = ''
+  $editor.classList.remove('hidden')
+  $preview.classList.add('hidden')
+}
 
 function togglePreview () {
   const isPreview = $('#isPreview').checked
@@ -51,6 +57,7 @@ function togglePreview () {
     $preview.classList.add('hidden')
     $editor.classList.remove('hidden')
     $editor.value = plainText
+    $editor.focus()
   }
 }
 
