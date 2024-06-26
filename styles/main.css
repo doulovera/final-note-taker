@@ -1,8 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -30,11 +29,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 1rem;
-  min-width: 320px;
   min-height: 100dvh;
-  max-width: 768px;
 }
 
 .page-title {
@@ -50,9 +48,10 @@ body {
 
 header {
   height: auto;
-  border-bottom: 2px solid #999;
+  width: 50%;
+  max-width: 768px;
   padding: 1rem 0;
-  margin-bottom: .5rem;
+  margin: 0 auto .5rem;
 }
 
 .btn-section {
@@ -81,7 +80,7 @@ button {
   flex-direction: column;
   min-height: 400px;
   height: 100%;
-  width: 100%;
+  width: 50%;
   max-width: 768px;
   min-width: 320px;
   margin: 0 auto;
@@ -90,15 +89,20 @@ button {
   border-radius: 8px;
   overflow: hidden;
 
-  #content, #preview {
+  #editor, #preview {
     flex: 1;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 1rem 2rem;
     resize: none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #000;
     background-color: #e4e4e4;
     border: 0;
+  }
+
+  #editor {
+    font-size: 1.6rem;
+    line-height: 1.5;
   }
 }

@@ -4,13 +4,14 @@
 
 import { marked } from 'marked'
 import { encode, decode } from 'js-base64'
-import './style.css'
+import './styles/main.css'
+import './styles/markdown.css'
 
 const DEFAULT_PREVIEW = true
 
 const $ = (selector) => document.querySelector(selector)
 
-const $editor = $('#content')
+const $editor = $('#editor')
 const $preview = $('#preview')
 
 let plainText = ''
@@ -63,8 +64,8 @@ function togglePreview () {
 
 $('#isPreview').addEventListener('change', togglePreview)
 
-/* Ctrl + E to toggle preview */
 document.addEventListener('keydown', (event) => {
+  /* Ctrl + E to toggle preview */
   if (event.ctrlKey && event.key === 'e') {
     event.preventDefault()
     $('#isPreview').click()
