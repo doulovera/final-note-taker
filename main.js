@@ -1,11 +1,12 @@
-/*
-  TODO: Live preview instead of click to convert
-*/
-
 import { marked } from 'marked'
 import { encode, decode } from 'js-base64'
+
+// Styles
 import './styles/main.css'
 import './styles/markdown.css'
+
+// Utils
+import { copyURL } from './utils/copy-to-clipboard'
 
 const DEFAULT_PREVIEW = true
 
@@ -70,6 +71,12 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault()
     $('#isPreview').click()
   }
+})
+
+const $btnCopyUrl = $('#btnCopyUrl')
+$btnCopyUrl.addEventListener('click', async (event) => {
+  event.preventDefault()
+  await copyURL()
 })
 
 /* Sanitize html ("<", ">") */
