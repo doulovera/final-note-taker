@@ -7,14 +7,57 @@
     <title>Note-Taking-App to the next level! 🚀</title>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <p class="page-title">Note-Taking-App on the fly to the next level! 🚀</p>
-      
-      <div class="btn-section">
+      <hr>
+      <p style="text-align:center;">v</p>
+
+      <div class="hover-area">
+        
+        <div class="btn-section">
+          <div role="button">
+            <label for="isPreview">
+              <input type="checkbox" id="isPreview">
+              Preview
+            </label>
+          </div>
+  
+          <button disabled>
+            Copy Link
+          </button>
+  
+          <button disabled>
+            Generate QR
+          </button>
+  
+          <button disabled>
+            Download file
+          </button>
+        </div>
+      </div>
+
+    </header> -->
+
+    <main>
+      <section class="container">
+        <textarea id="editor" contenteditable="true" placeholder="Write your things!"></textarea>
+        <div id="preview" contenteditable="false"></div>
+      </section>
+
+      <aside class="action-buttons">
         <div role="button">
           <label for="isPreview">
             <input type="checkbox" id="isPreview">
-            Preview
+
+            <div>
+              <span>
+                Preview
+              </span>
+  
+              <small>
+                <kbd>ctrl</kbd> + <kbd>e</kbd>
+              </small>
+            </div>
           </label>
         </div>
 
@@ -29,13 +72,10 @@
         <button disabled>
           Download file
         </button>
-      </div>
-    </header>
-
-    <section class="container">
-      <textarea id="editor" contenteditable="true"></textarea>
-      <div id="preview" contenteditable="false"></div>
-    </section>
+      </aside>
+      
+    </main>
+    
 
     <script type="module" src="/main.js"></script>
   </body>
