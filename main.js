@@ -8,6 +8,7 @@ import './styles/modal.css'
 
 // Utils
 import { copyURL } from './utils/copy-to-clipboard'
+import { animateButton } from './utils/animate-button'
 
 const DEFAULT_PREVIEW = true
 
@@ -78,6 +79,10 @@ const $btnCopyUrl = $('#btnCopyUrl')
 $btnCopyUrl.addEventListener('click', async (event) => {
   event.preventDefault()
   await copyURL()
+
+  const animationClassName = 'fill-btn'
+  const seconds = 1.5
+  animateButton($btnCopyUrl, animationClassName, seconds * 1000)
 })
 
 const $whatsThis = $('.question-info')

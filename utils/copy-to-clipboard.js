@@ -1,12 +1,10 @@
 const copyToClipboard = async (str) => {
   try {
     await navigator.clipboard.writeText(str)
-    console.log('Copied to clipboard')
+    return true
   } catch (err) {
-    console.error('Failed to copy: ', err)
+    return false
   }
 }
 
-export const copyURL = async () => {
-  await copyToClipboard(window.location.href)
-}
+export const copyURL = async () => copyToClipboard(window.location.href)
