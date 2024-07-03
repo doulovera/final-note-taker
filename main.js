@@ -4,6 +4,7 @@ import { encode, decode } from 'js-base64'
 // Styles
 import './styles/main.css'
 import './styles/markdown.css'
+import './styles/modal.css'
 
 // Utils
 import { copyURL } from './utils/copy-to-clipboard'
@@ -79,4 +80,14 @@ $btnCopyUrl.addEventListener('click', async (event) => {
   await copyURL()
 })
 
-/* Sanitize html ("<", ">") */
+const $whatsThis = $('.question-info')
+const $modal = $('.modal')
+const $closeModal = $('.close-modal')
+const $closeModalBtn = $('.close-modal-btn')
+
+const closeModal = () => $modal.classList.remove('show')
+
+$whatsThis.addEventListener('click', () => $modal.classList.toggle('show'))
+
+$closeModal.addEventListener('click', closeModal)
+$closeModalBtn.addEventListener('click', closeModal)

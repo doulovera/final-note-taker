@@ -7,36 +7,37 @@
     <title>Note-Taking-App to the next level! 🚀</title>
   </head>
   <body>
-    <!-- <header>
-      <p class="page-title">Note-Taking-App on the fly to the next level! 🚀</p>
-      <hr>
-      <p style="text-align:center;">v</p>
+    <div class="modal">
+      <div class="modal-content">
+        <section class="modal-header">
+          <p class="modal-title">
+            What is this❓
+          </p>
+          <button class="close-modal">
+            &#10005;
+          </button>
+        </section>
 
-      <div class="hover-area">
-        
-        <div class="btn-section">
-          <div role="button">
-            <label for="isPreview">
-              <input type="checkbox" id="isPreview">
-              Preview
-            </label>
-          </div>
-  
-          <button disabled>
-            Copy Link
-          </button>
-  
-          <button disabled>
-            Generate QR
-          </button>
-  
-          <button disabled>
-            Download file
-          </button>
+        <div class="modal-description">
+          <p>
+            📝 This app is perfect if you want to write something down and share it with someone else <strong>without logging in</strong> on any platform.
+          </p>
+          <p>
+            👥 You can share the link with anyone and they will be able to see what you wrote.
+            The text is saved in the URL itself, so if <strong>you change the text, the URL will change</strong>.
+          </p>
+          <p>
+            🤳 Because of the URL being too large, it is recommended to use a <strong>URL shortener</strong> or share it with the option of <strong>QR code</strong>.
+          </p>
         </div>
-      </div>
 
-    </header> -->
+        <section class="modal-footer">
+          <button class="close-modal-btn" type="button">
+            Close
+          </button>
+        </section>
+      </div>
+    </div>
 
     <main>
       <section class="container">
@@ -61,7 +62,7 @@
           </label>
         </div>
 
-        <button disabled>
+        <button id="btnCopyUrl">
           Copy Link
         </button>
 
@@ -69,9 +70,9 @@
           Generate QR
         </button>
 
-        <button disabled>
-          Download file
-        </button>
+        <p class="question-info">
+          What is this?
+        </p>
       </aside>
       
     </main>
